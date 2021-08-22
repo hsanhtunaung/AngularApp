@@ -11,14 +11,16 @@ import { PlayersModule } from './Players/player.module';
 import { ListsComponent } from "./Players/lists/lists.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatListModule} from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,     
-    ListsComponent, 
+    ListsComponent,   
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,11 +28,14 @@ import 'hammerjs';
        MatTableModule,
       HttpClientModule,
     FormsModule,
-    PlayersModule, MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatInputModule, MatFormFieldModule,
+    PlayersModule, MatAutocompleteModule, MatBadgeModule,
+    MatBottomSheetModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatListModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },    
       { path: 'lists', component: ListsComponent },
-     
+  
+
     ]),
     BrowserAnimationsModule
   ],

@@ -10,15 +10,23 @@
         </div>
         <div class="col text-right">
           <a href="#" routerLink="/lists" class="btn btn-secondary btn-sm">Back To Players List</a>
+
         </div>
       </div>
     </div>
-    <ul class="list-group list-group-flush">
+    <!--<ul class="list-group list-group-flush">
       <li class="list-group-item"><b>Id:</b> {{ player.id }}</li>
       <li class="list-group-item"><b>Shirt No:</b> {{ player.shirtNo }}</li>
       <li class="list-group-item"><b>Position:</b> {{ player.position?.name }}</li>
       <li class="list-group-item"><b>Appearances:</b> {{ player.appearances }}</li>
-      <li class="list-group-item"><b>Goals:</b> {{ player.goal }}</li>     
-    </ul>
+      <li class="list-group-item"><b>Goals:</b> {{ player.goal }}</li>
+    </ul>-->
+
+    <mat-list>
+      <mat-list-item> <b>Id:</b> {{ player.id }} </mat-list-item>
+      <mat-list-item> <b>Shirt No:</b> {{ player.shirtNo }} </mat-list-item>
+      <mat-list-item> <b>Position:</b> {{ player.position?.name }} </mat-list-item>
+      <mat-list-item> <b>Goals:</b> {{ player.goal }} </mat-list-item>
+    </mat-list>
   </div>
 </div>
